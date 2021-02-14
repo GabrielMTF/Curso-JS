@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações com Valores</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 150px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1s" id="txtn1s"> +
+    <input type="number" name="txtn2s" id="txtn2s">
+    <input type="button" value="somar" onclick="soma()" onmousemove="mover()">
+    <div id="res2">Resultado</div>
+
+    <h1>Multiplicando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> x
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="multiplicar" onclick="multi()" onmousemove="mover()">
+    <div id="res">Resultado</div>
+    <script>
+        function multi() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+           var n2 = Number(tn2.value)
+           var s = n1 * n2
+           res.innerHTML = `A multiplicação entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+        function soma() {
+
+         var tn1s = window.document.getElementById('txtn1s')
+         var tn2s = window.document.getElementById('txtn2s')
+         var res2 = window.document.getElementById('res2')
+         var n1s = Number(tn1s.value)
+         var n2s = Number(tn2s.value)
+         var s2 = n1s + n2s
+         res2.innerHTML = `A soma entre ${n1s} e ${n2s} é igual a <strong>${s2}</strong>` 
+
+        }
+        
+    </script>
+    
+</body>
+</html>
