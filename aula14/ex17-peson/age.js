@@ -46,4 +46,4 @@ function verificar() {
         res.appendChild(img)
 
     }
-}//Arthur é Gay!
+}
